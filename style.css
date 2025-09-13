@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  image-rendering: pixelated;
+  background: url('assets/backgrounds/landing-bg.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+.screen {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  margin: 40px auto;
+  width: 80%;
+  max-width: 700px;
+  background: rgba(0,0,0,0.7);
+  border: 6px solid #3d2310;
+  border-radius: 8px;
+}
+
+.active { display: block; }
+
+h1 {
+  background: url('assets/ui/wood-title.png') no-repeat center;
+  background-size: contain;
+  color: #ffe97f;
+  padding: 20px;
+}
+
+button {
+  background: #4CAF50;
+  border: 3px solid #2e7d32;
+  color: white;
+  padding: 12px 24px;
+  margin: 15px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 8px 16px;
+  background: url("wood-button.png"); /* optional pixel button image */
+  background-size: cover;
+  border: none;
+  font-family: "Press Start 2P", cursive; /* retro pixel font */
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+.back-btn:hover {
+  opacity: 0.8;
+}
+
+
+button:disabled {
+  background: #555;
+  border-color: #333;
+}
+
+.story {
+  max-height: 250px;
+  overflow-y: auto;
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+  font-size: 10px;
+  text-align: left;
+}
+
+.pets {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.pet img {
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+.selected { border: 3px solid yellow; }
+
+.items, .bin {
+  border: 3px dashed #fff;
+  min-height: 120px;
+  margin: 15px;
+  padding: 10px;
+}
+
+.draggable {
+  display: inline-block;
+  background: #ffe97f;
+  color: #000;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: grab;
+}

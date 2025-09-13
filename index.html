@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoPetxel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Landing -->
+  <div id="landing" class="screen active">
+    <h1>EcoPetxel</h1>
+    <div class="story">
+      <p>🌍 Welcome, young explorer!</p>
+      <p>The world of <b>Pixelterra</b> is fading… forests vanish, rivers dry, skies turn grey.</p>
+      <p>You are chosen as a <b>Guardian of Nature</b> with a loyal pet that grows strong only when YOU take eco-friendly steps.</p>
+      <p>✨ Complete quests like composting, harvesting rainwater, recycling… and bring life back to the land!</p>
+    </div>
+    <button onclick="showScreen('adopt')">Start Your Journey</button>
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <!-- Adopt Pet -->
+  <div id="adopt" class="screen">
+    <h2>Adopt Your Pet</h2>
+    <div class="pets">
+      <div class="pet" onclick="selectPet(this,'Cat')">
+        <img src="assets/pets/cat.png" alt="Cat" width="64" height="64">
+      </div>
+      <div class="pet" onclick="selectPet(this,'Dog')">
+        <img src="assets/pets/dog.png" alt="Dog" width="64" height="64">
+      </div>
+      <div class="pet" onclick="selectPet(this,'Otter')">
+        <img src="assets/pets/otter.png" alt="Otter" width="64" height="64">
+      </div>
+      <div class="pet" onclick="selectPet(this,'Hamster')">
+        <img src="assets/pets/hamster.png" alt="Hamster" width="64" height="64">
+      </div>
+      <div class="pet" onclick="selectPet(this,'Squirrel')">
+        <img src="assets/pets/squirrel.png" alt="Squirrel" width="64" height="64">
+      </div>
+    </div>
+    <input id="petName" type="text" placeholder="Name your pet" />
+    <br>
+    <button id="stepBtn" onclick="showScreen('topics')" disabled>Step Forward</button>
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <!-- Topics -->
+  <div id="topics" class="screen">
+    <h2>Select a Topic</h2>
+    <button onclick="showScreen('manure')">🌱 Manure Making</button>
+    <button disabled>💧 Rainwater Harvesting (Locked)</button>
+    <button disabled>♻ Waste Segregation (Locked)</button>
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <!-- Manure -->
+  <div id="manure" class="screen">
+    <h2>🌱 Manure Making</h2>
+    <p>Drag items into the compost bin.</p>
+    <div class="items">
+      <div class="draggable" draggable="true">🍎 Fruit Peel</div>
+      <div class="draggable" draggable="true">🥩 Meat</div>
+      <div class="draggable" draggable="true">🍂 Dry Leaves</div>
+      <div class="draggable" draggable="true">🧃 Plastic</div>
+    </div>
+    <div id="bin" class="bin">🗑 Compost Bin</div>
+    <button onclick="finishManure()">Finish</button>
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
